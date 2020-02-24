@@ -10,7 +10,7 @@
 
 using namespace std;
 
-// 分解整数，存入数组。
+// 分情况讨论。
 class Solution {
 public:
     int romanToInt(string s) {
