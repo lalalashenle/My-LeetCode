@@ -1,0 +1,42 @@
+/// Source : https://leetcode-cn.com/problems/palindrome-number/
+/// Author : lalalashenle
+/// Time   : 2020-1月
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <map>
+#include <set>
+
+using namespace std;
+
+// 分解整数，存入数组。
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        string num;
+        int i;
+        if (x < 0)
+            return false;
+        while (x > 0) {
+            num.push_back(x % 10);
+            x /= 10;
+            //i++;
+        }
+
+        for (i = 0; i < (num.length()) / 2; i++) {
+            if (num[i] != num[num.length() - 1 - i])
+                return false;
+        }
+        return true;
+    }
+};
+
+int main() {
+    Solution test;
+    int x = 121;
+    bool ans = test.isPalindrome(x);
+    cout << ans;
+
+    return 0;
+}
