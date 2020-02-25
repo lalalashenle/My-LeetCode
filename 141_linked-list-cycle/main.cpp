@@ -35,13 +35,3 @@ public:
         return false;
     }
 };
-
-int main() {
-    Solution test;
-    vector<int> prices = {1, 2, 3, 4, 5};
-
-    int res = test.maxProfit(prices);
-    cout << res;
-
-    return 0;
-}
